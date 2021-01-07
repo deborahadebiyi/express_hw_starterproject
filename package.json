@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "name": "express_hw_starterproject",
+  "description": "A starter project creating an express app from scratch to familiarise myself with the tools used by LEGO.",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deborahadebiyi/express_hw_starterproject.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deborahadebiyi/express_hw_starterproject/issues"
+  },
+  "homepage": "https://github.com/deborahadebiyi/express_hw_starterproject#readme"
+}
