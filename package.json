@@ -1,14 +1,14 @@
 {
+  "name": "express_hw_starterproject",
+  "description": "A starter project creating an express app from scratch to familiarise myself with the tools used by LEGO.",
+  "version": "1.0.0",
+  "main": "app.js",
   "dependencies": {
     "express": "^4.17.1",
     "nodemon": "^2.0.7",
     "swagger-jsdoc": "^6.0.1",
     "swagger-ui-express": "^4.1.6"
   },
-  "name": "express_hw_starterproject",
-  "description": "A starter project creating an express app from scratch to familiarise myself with the tools used by LEGO.",
-  "version": "1.0.0",
-  "main": "app.js",
   "scripts": {
     "test": "jest",
     "start": "nodemon server.js"
