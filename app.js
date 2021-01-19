@@ -4,8 +4,9 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const yamlJs = require('yamljs');
 const app = express();
-const books = require('./books');
+// const books = require('./bookObject');
 const swaggerUI = require('swagger-ui-express');
+const bookRouter = require('./src/routes/books');
 
 app.use(bodyParser.json());
 app.use(bodyParser.text());
@@ -22,14 +23,6 @@ app.use(
     }),
 );
 
-// app.get('/', function(req,res){
-//     res.send('Hello World');
-// })
-
-app.get('/health', function(req,res){
-    console.log("Hello there");
-    res.status(200).json({ status: 'OK' })
-})
 
 //error handler
 app.use((err, req, res, next) => {
@@ -40,27 +33,8 @@ app.use((err, req, res, next) => {
     });
   });
 
-
-//returns book that was created
-app.post('/books', function(req,res){
-    res.status(201).json([{book}]);
-})
-
-//returns a single book based on the id
-app.get('/book/:book_id', function(req,res){
-    res.status(200).send([{book}]);
-})
-
-//lists all books
-app.get('/books', function(req,res){
-    res.status(200).json([{books}]);
-})
-
-//deletes a book
-app.delete('/book/:book_id', function(req,res){
-    res.status(204).send('Book sucessfully removed');
-})
-
+  //route setup
+app.use('/', bookRouter);
 
 
 module.exports = app;
