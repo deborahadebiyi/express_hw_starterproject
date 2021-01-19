@@ -8,7 +8,10 @@
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "express-openapi-validator": "^4.10.5",
-    "nodemon": "^2.0.7",
+    "mongo": "^0.1.0",
+    "mongod": "^2.0.0",
+    "mongodb": "^3.6.3",
+    "mongoose": "^5.11.12",
     "parser": "^0.1.4",
     "swagger-jsdoc": "^6.0.1",
     "swagger-ui-express": "^4.1.6",
@@ -29,7 +32,9 @@
   },
   "homepage": "https://github.com/deborahadebiyi/express_hw_starterproject#readme",
   "devDependencies": {
+    "dotenv": "^8.2.0",
     "jest": "^26.6.3",
+    "nodemon": "^2.0.7",
     "supertest": "^6.0.1"
   }
 }
