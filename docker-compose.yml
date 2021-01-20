@@ -1,0 +1,23 @@
+version: "3.9"
+services:
+  app:
+    build: 
+      context: .
+    ports: 
+      - 8080:8080
+    image: app
+    container_name: app
+    depends_on:
+      - mongo
+  mongo:
+    ports: 
+      - 27017:27017
+    image: mongo
+  test:
+    build: 
+      context: .
+      target: test
+    depends_on:
+      - mongo
+      - app
+    command: npm test

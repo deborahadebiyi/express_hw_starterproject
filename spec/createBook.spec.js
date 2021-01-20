@@ -1,5 +1,5 @@
 const request = require("supertest");
-const app = require("../app");
+const app = require("../src/app");
 
 describe("Test the create books endpoint", () => {
     test("it should respond to the post method", async() => {

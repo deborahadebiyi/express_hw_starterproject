@@ -1,4 +1,4 @@
-FROM node:14  
+FROM node:14 as base  
 #defines what images you re building from 
 WORKDIR /app
 
@@ -6,7 +6,10 @@ COPY package*.json ./
 
 RUN npm install
 
-COPY . . 
+COPY src src
 
-EXPOSE 3000
-CMD ["node", "server.js"]
+#creating test image
+FROM base as test
+
+COPY spec spec
+

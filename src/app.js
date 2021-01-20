@@ -1,17 +1,13 @@
 const express = require('express');
 const openApiValidator = require('express-openapi-validator');
-const bodyParser = require('body-parser');
-const path = require('path');
 const yamlJs = require('yamljs');
-const app = express();
-// const books = require('./bookObject');
 const swaggerUI = require('swagger-ui-express');
-const bookRouter = require('./src/routes/books');
+const bookRouter = require('./routes/books');
 
-app.use(bodyParser.json());
-app.use(bodyParser.text());
-app.use(bodyParser.urlencoded({ extended: false }));
-// const apiSpec = path.join(__dirname, `api.yml`);
+const app = express();
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 const apiSpec = yamlJs.load('./api.yml');
 app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(apiSpec)); // provides the api spec via an api route
 
