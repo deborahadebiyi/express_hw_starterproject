@@ -1,5 +1,5 @@
 const deleteBook = () => {
-    console.log("book deleted")
+    console.log("book deleted");
 }
 
-module.exports = deleteBook
+module.exports = deleteBook;
